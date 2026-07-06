@@ -1,0 +1,306 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #000000;
+}
+
+/* ===== HEADER ===== */
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(180deg, #1c1c1c 0%, #0f0f0f 100%);
+    border-bottom: 3px solid #8a0000;
+    box-shadow: 0 4px 20px rgba(179, 0, 0, 0.35);
+    z-index: 100;
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    min-height: 95px;
+}
+
+/* ===== LOGO ===== */
+.logo-link {
+    grid-column: 1;
+    justify-self: start;
+    margin-bottom: 0;
+}
+
+.logo-img {
+    display: block;
+    height: 80px;
+    width: auto;
+    border-radius: 0;      /* remove o círculo */
+    border: none;          /* remove a borda vermelha */
+    padding: 0;            /* remove o espaçamento interno */
+    background-color: transparent;
+    box-shadow: none;      /* remove o brilho */
+}
+
+
+.logo-link:hover {
+    transform: scale(1.08);
+}
+
+/* ===== DIVISOR SUTIL ENTRE LOGO E MENU ===== */
+.header-content::after {
+    content: "";
+}
+
+/* ===== NAVEGAÇÃO ===== */
+.navegacao {
+    grid-column: 2;
+    justify-self: center;
+    border-top: none;
+    padding-top: 0;
+}
+
+.navegacao a {
+    position: relative;
+    text-decoration: none;
+    color: #d9d9d9;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+/* Primeiro item (Umbrella Corporation) em destaque */
+.navegacao a:first-child {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    color: #ff3333;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(255, 26, 26, 0.5);
+}
+
+/* Efeito de sublinhado animado */
+.navegacao a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 0%;
+    height: 2px;
+    background-color: #ff1a1a;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navegacao a:hover {
+    color: #ffffff;
+    background-color: rgba(179, 0, 0, 0.15);
+    letter-spacing: 1.8px;
+}
+
+.navegacao a:hover::before {
+    width: 70%;
+    left: 15%;
+}
+
+
+/* Titutlo princiapal*/
+.RE-titulo {
+    width: 100%;
+    min-height: 650px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 150px;
+
+    overflow: hidden;
+
+    background-color: #000;
+    background-image:
+        radial-gradient(ellipse at left, rgba(74,0,0,0.9) 0%, rgba(10,0,0,0.95) 60%, #000000 100%),
+        repeating-linear-gradient(
+            180deg,
+            rgba(255,255,255,0.04) 0px,
+            rgba(255,255,255,0.04) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+    
+}
+
+.site-title {
+    position: relative;
+    z-index: 2;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 120px;
+    line-height: 0.95;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ffffff;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.Leon-Home {
+    height: 550px;
+    width: auto;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,.3));
+    margin-left: 300px;
+}
+
+.texto-home{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 20px;   
+    color: #ffffff;        
+}
+
+.descricao-home{
+    font-size: 20px;
+    font-weight: 200;
+    max-width: 600px; /* ou 700px, 800px... */
+    line-height: 1.6;
+}
+
+.explorar-cards h1{
+    text-align: center;
+    color: #d9d9d9;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+}
+
+.explorar-cards span{
+    color: #8a0000;
+}
+
+.cards-main{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    color: #d9d9d9;
+    margin: 50px;
+    background-color:#3a1010;;
+    width: 320px;
+    height: 550px;
+    border: 1px solid #7a2222;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.6);
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(120,0,0,.5);
+    transition: .35s;
+}
+
+.card>img{
+width: 100%;
+border: top left radius 10px; ;
+border-top-right-radius: 10px;
+margin-bottom: 10px;
+box-shadow: inset 0 -20px 30px rgba(0,0,0,.8);
+}
+
+.card>h1{
+    color: #e3e3e3;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.card>p{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    padding: 20px;
+}
+
+.btn{
+    display: inline-block;
+    margin-left: 80px;
+    margin-top: 20px;
+    padding: 12px 50px;
+
+    background: linear-gradient(135deg, #000000, #2b2b2b);
+    color: #d9d9d9;
+
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    border: 2px solid #8a0000;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn:hover{
+    background: #8a0000;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(138, 0, 0, 0.7);
+}
+
+.footer {
+    background-color: #2b2b2b;
+    color: white; 
+    padding: 80px 60px 40px;;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer h3, .footer h4 {
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    margin-bottom: 20px;
+}
+
+.footer a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.footer a:hover {
+    opacity: 1;
+    color: white;
+    transform: translateX(5px);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 13px;
+    opacity: 0.6;
+    line-height: 1.6;
+}
+
+.about{
+color: #8a0000;
+}

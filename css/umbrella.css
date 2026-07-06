@@ -1,0 +1,101 @@
+@import url(style.css);
+/*===== ABA DA UMBRELLA CORP======*/    
+
+.umbrella-coorp{
+    text-align: center;
+    margin-bottom: 40px;
+    color:white;
+    
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+#container-umbrella{
+    
+    width: 90%;         
+    max-width: 1400px;   
+    margin: 0 auto;      
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;      
+    align-items: stretch;   
+    font-family: "Share Tech Mono", monospace;
+    text-align: left;
+}
+/*left e right é os lados das colunas na página*/
+
+.umbrella-left{
+    background-color: transparent;
+    
+    color: #8a8a8a;
+}
+/*Imagem alerta biológico*/
+
+.alertabio-img{
+    width: 120px;
+    height: auto;
+    position: relative;
+    top:50%;
+}
+/*A parte do "Por trás da Máscara"*/
+.titulo-umbrella {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    font-family: "Share Tech Mono", monospace;
+}
+
+.titulo-umbrella h2 {
+    transform: translateY(-25px);
+    margin: 0;
+    font-size: 35px;    
+    font-family: "Share Tech Mono", monospace;
+    
+}
+.sobre-umbrella{
+    font-size: 20px;
+}
+.sobre-umbrella h2{
+    text-align: center;
+    margin-bottom: 20px;
+    padding-right: 120px;
+    margin: 0;
+}
+/*Cards abaixo do grid esquerdo*/
+.info-cards-um  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+    
+}
+
+.info-card-um{
+    border: 1px solid rgb(82, 81, 81);
+    padding: 18px;
+    color: #8a8a8a;
+    background: transparent;
+    text-align: center;
+    font-size: 18px;
+}
+/*Coluna direita do grid*/
+.umbrella-right{
+    display: grid;
+    flex-direction: column;
+    gap: 15px;
+    grid-template-rows: repeat(4, 1fr);
+    color: #8a8a8a;
+    
+}
+
+.laboratorios{
+    padding: 25px;
+    background: transparent;
+    border-color: rgb(82, 81, 81);
+    border-radius: 0px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 18px;
+    
+}

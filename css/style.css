@@ -1,28 +1,50 @@
+:root{
+    /* ===== PALETA DE CORES ===== */
+    --black: #000;
+    --dark-gray: #0f0f0f;
+    --gray: #1c1c1c;
+    --dark-red: #2e0e0e;
+    --red: #8a0000;
+    --red-medium: #b30000;
+    --red-light: #ff1a1a;
+    --red-bright: #ff3333;
+    --white: #ffffff;
+    --light-gray: #d9d9d9;
+
+    /* Transparências */
+    --red-shadow: rgba(179, 0, 0, 0.35);
+    --red-glow: rgba(255, 26, 26, 0.5);
+    --red-hover: rgba(179, 0, 0, 0.15);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html, body{
+
+html,
+body {
     min-height: 100%;
     margin: 0;
 }
-/*Fundo do site*/
+
+/* Fundo do site */
 body {
-   
-    background: linear-gradient(to bottom,  #401313, #000);
+    background: linear-gradient(to bottom, var(--dark-red), var(--black));
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /* ===== HEADER ===== */
+
 .header {
     width: 100%;
     position: sticky;
     top: 0;
-    background: linear-gradient(180deg, #1c1c1c 0%, #0f0f0f 100%);
-    border-bottom: 3px solid #8a0000;
-    box-shadow: 0 4px 20px rgba(179, 0, 0, 0.35);
+    background: linear-gradient(180deg, var(--gray) 0%, var(--dark-gray) 100%);
+    border-bottom: 3px solid var(--red);
+    box-shadow: 0 4px 20px var(--red-shadow);
     z-index: 100;
 }
 
@@ -34,55 +56,10 @@ body {
     margin: 0 auto;
     padding: 16px 20px;
     min-height: 95px;
-    
-    
-}
-
-.RE-titulo {
-    position: relative;
-    width: 100%;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-
-    background-color: #000000;
-    background-image:
-        radial-gradient(ellipse at center, rgba(74,0,0,0.9) 0%, rgba(10,0,0,0.95) 60%, #000000 100%),
-        repeating-linear-gradient(
-            180deg,
-            rgba(255,255,255,0.04) 0px,
-            rgba(255,255,255,0.04) 1px,
-            transparent 1px,
-            transparent 3px
-        );
-    background-size: cover;
-    background-position: center;
-}
-
-.site-title {
-    position: relative;
-    z-index: 2;
-
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 160px;
-    line-height: 0.95;
-    font-weight: 900;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: #ffffff;
-    margin: 0;
-    padding: 0 20px;
-
-    text-shadow:
-        0 0 5px rgba(255, 0, 0, 0.8),
-        0 0 px rgba(255, 0, 0, 0.6),
-        0 0 10px rgba(180, 0, 0, 0.5);
 }
 
 /* ===== LOGO ===== */
+
 .logo-link {
     grid-column: 1;
     justify-self: start;
@@ -93,24 +70,25 @@ body {
     display: block;
     height: 80px;
     width: auto;
-    border-radius: 0;      /* remove o círculo */
-    border: none;          /* remove a borda vermelha */
-    padding: 0;            /* remove o espaçamento interno */
+    border-radius: 0;
+    border: none;
+    padding: 0;
     background-color: transparent;
-    box-shadow: none;      /* remove o brilho */
+    box-shadow: none;
 }
-
 
 .logo-link:hover {
     transform: scale(1.08);
 }
 
-/* ===== DIVISOR SUTIL ENTRE LOGO E MENU ===== */
+/* ===== DIVISOR ===== */
+
 .header-content::after {
     content: "";
 }
 
 /* ===== NAVEGAÇÃO ===== */
+
 .navegacao {
     grid-column: 2;
     justify-self: center;
@@ -121,7 +99,7 @@ body {
 .navegacao a {
     position: relative;
     text-decoration: none;
-    color: #d9d9d9;
+    color: var(--light-gray);
     font-family: "Bebas Neue", sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -129,19 +107,23 @@ body {
     text-transform: uppercase;
     padding: 10px 16px;
     border-radius: 4px;
-    transition: color 0.3s ease, background-color 0.3s ease, letter-spacing 0.3s ease;
+    transition: color .3s ease,
+                background-color .3s ease,
+                letter-spacing .3s ease;
 }
 
-/* Primeiro item (Umbrella Corporation) em destaque */
+/* Primeiro item */
+
 .navegacao a:first-child {
     font-family: "Bebas Neue", sans-serif;
     font-size: 20px;
-    color: #ff3333;
+    color: var(--red-bright);
     letter-spacing: 2px;
-    text-shadow: 0 0 8px rgba(255, 26, 26, 0.5);
+    text-shadow: 0 0 8px var(--red-glow);
 }
 
-/* Efeito de sublinhado animado */
+/* Sublinhado */
+
 .navegacao a::before {
     content: "";
     position: absolute;
@@ -149,13 +131,14 @@ body {
     bottom: 4px;
     width: 0%;
     height: 2px;
-    background-color: #ff1a1a;
-    transition: width 0.3s ease, left 0.3s ease;
+    background-color: var(--red-light);
+    transition: width .3s ease,
+                left .3s ease;
 }
 
 .navegacao a:hover {
-    color: #ffffff;
-    background-color: rgba(179, 0, 0, 0.15);
+    color: var(--white);
+    background-color: var(--red-hover);
     letter-spacing: 1.8px;
 }
 
@@ -164,107 +147,49 @@ body {
     left: 15%;
 }
 
+/* ===== FOOTER ===== */
 
-/*===== ABA DA UMBRELLA CORP======*/    
-
-.umbrella-coorp{
-    text-align: center;
-    margin-bottom: 40px;
-    color:white;
-    font-family: "Montenegrin Gothic One", serif;
-    font-size: 30px;
-    margin-top: 25px;
+.footer {
+    color: var(--white);
+    padding: 80px 60px 40px;
 }
 
-#container-umbrella{
-    
-    width: 90%;         
-    max-width: 1400px;   
-    margin: 0 auto;      
+.footer-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;      
-    align-items: stretch;   
-    font-family: "Share Tech Mono", monospace;
-    text-align: left;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
 }
-/*left e right é os lados das colunas na página*/
 
-.umbrella-left{
-    background-color: transparent;
-    
-    color: #8a8a8a;
-}
-/*Imagem alerta biológico*/
-
-.alertabio-img{
-    width: 120px;
-    height: auto;
-    position: relative;
-    top:50%;
-}
-/*A parte do "Por trás da Máscara"*/
-.titulo-umbrella {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+.footer h3,
+.footer h4 {
+    color: var(--white);
+    font-family: 'Fredoka', sans-serif;
     margin-bottom: 20px;
-    font-family: "Share Tech Mono", monospace;
 }
 
-.titulo-umbrella h2 {
-    transform: translateY(-25px);
-    margin: 0;
-    font-size: 35px;    
-    font-family: "Share Tech Mono", monospace;
-    
+.footer a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    margin-top: 10px;
+    opacity: .8;
+    transition: .3s;
 }
-.sobre-umbrella{
-    font-size: 20px;
+
+.footer a:hover {
+    opacity: 1;
+    color: var(--white);
+    transform: translateX(5px);
 }
-.sobre-umbrella h2{
+
+.copyright {
     text-align: center;
-    margin-bottom: 20px;
-    padding-right: 120px;
-    margin: 0;
-}
-/*Cards abaixo do grid esquerdo*/
-.info-cards-um  {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin-top: 30px;
-    
+    margin-top: 60px;
+    font-size: 13px;
+    opacity: .6;
+    line-height: 1.6;
 }
 
-.info-card-um{
-    border: 1px solid rgb(82, 81, 81);
-    padding: 18px;
-    color: #8a8a8a;
-    background: transparent;
-    text-align: center;
-    font-size: 18px;
+.about {
+    color: var(--red);
 }
-/*Coluna direita do grid*/
-.umbrella-right{
-    display: grid;
-    flex-direction: column;
-    gap: 15px;
-    grid-template-rows: repeat(4, 1fr);
-    color: #8a8a8a;
-    
-}
-
-.laboratorios{
-    padding: 25px;
-    background: transparent;
-    border-color: rgb(82, 81, 81);
-    border-radius: 0px;
-    border-style: solid;
-    border-width: 1px;
-    font-size: 18px;
-    
-}
-
-
-
