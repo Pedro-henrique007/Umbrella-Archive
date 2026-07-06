@@ -13,7 +13,7 @@
 #container-umbrella{
     
     width: 90%;         
-    max-width: 1400px;   
+    max-width: 1300px;   
     margin: 0 auto;      
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -98,4 +98,69 @@
     border-width: 1px;
     font-size: 18px;
     
+}
+
+/* ====Desenvolvimento e queda da Umbrella==== */
+
+#historia-umbrella {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    color: #8a8a8a;
+    font-size: 19px;
+    font-family: "Share Tech Mono", monospace;
+}
+
+.linha-historia {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+    align-items: start;
+}
+
+.topico-historia {
+    margin: 0;
+    padding: 0;
+}
+
+.topico-historia h2 {
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    line-height: 1.2;
+    margin-top: 30px;
+}
+
+.topico-historia p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    
+}
+/* Imagens de cada "parágrafo" da página*/
+
+.imagem-historia {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 120%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.imagem-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    margin: 0;
+    object-fit: cover;
+    display: block;
+}
+.imagem-historia figcaption {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 0.4rem;
+    font-style: italic;
 }
