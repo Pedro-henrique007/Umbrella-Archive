@@ -1,2 +1,182 @@
-/*esse import é o arquivo que vai ter em todas as abas. NAO APAGUE*/
+/* Importando as configurações globais do seu site (header, footer, fontes) */
 @import url(style.css);
+
+/* CONTAINER PRINCIPAL */
+.container-criaturas {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Share Tech Mono', monospace;
+    color: #e0e0e0;
+}
+
+.titulo-pagina {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #ff3333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #ff3333;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.3);
+}
+
+.subtitulo-pagina {
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* SISTEMA DE ABAS EXPANSÍVEIS (DETAILS) */
+.jogo-abas {
+    background-color: rgba(20, 20, 20, 0.85);
+    border: 1px solid #333;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo quando a aba está aberta */
+.jogo-abas[open] {
+    border-color: #ff3333;
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.15);
+}
+
+/* O "Botão" que clica para expandir */
+.jogo-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    list-style: none; /* Remove a setinha padrão do navegador */
+    background: linear-gradient(90deg, #151515, #222);
+    border-bottom: 1px solid #222;
+    transition: background 0.3s ease;
+}
+
+/* Remove a setinha padrão no Safari/Chrome */
+.jogo-titulo::-webkit-details-marker {
+    display: none;
+}
+
+.jogo-titulo:hover {
+    background: linear-gradient(90deg, #251010, #222);
+    color: #ff3333;
+}
+
+/* Animação simples na seta interna */
+.jogo-titulo .seta {
+    font-size: 0.9rem;
+    color: #666;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.jogo-abas[open] .jogo-titulo .seta {
+    transform: rotate(180deg);
+    color: #ff3333;
+}
+
+/* CONTEÚDO DENTRO DA ABA */
+.aba-conteudo {
+    padding: 20px;
+    background-color: #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* CARDS DAS CRIATURAS */
+.criatura-card {
+    display: flex;
+    background-color: #111;
+    border: 1px solid #222;
+    border-left: 4px solid #ff3333; /* Detalhe vermelho lateral sinistro */
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.3s ease;
+}
+
+.criatura-card:hover {
+    transform: translateY(-2px);
+    border-color: #444;
+}
+
+/* FOTO DA CRIATURA */
+.criatura-foto-box {
+    width: 380px;
+    min-width: 250px;
+    height: 400px;
+    background-color: #050505;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-right: 1px solid #222;
+}
+
+.criatura-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+    filter: grayscale(30%);
+}
+
+.criatura-card:hover .criatura-foto {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* INFORMAÇÕES DO TEXTO */
+.criatura-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.criatura-info h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    letter-spacing: 1px;
+}
+
+.criatura-info p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #aaa;
+}
+
+.criatura-info p strong {
+    color: #ff3333;
+}
+
+/* RESPONSIVIDADE (Para telas de celular) */
+@media (max-width: 768px) {
+    .criatura-card {
+        flex-direction: column;
+    }
+
+    .criatura-foto-box {
+        width: 100%;
+        min-width: 100%;
+        height: 200px;
+        border-right: none;
+        border-bottom: 1px solid #222;
+    }
+    
+    .titulo-pagina {
+        font-size: 2.2rem;
+    }
+}

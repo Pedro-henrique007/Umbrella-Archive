@@ -1,2 +1,78 @@
 /*esse import é o arquivo que vai ter em todas as abas. NAO APAGUE*/
 @import url(style.css);
+
+/* Container Geral */
+.container-virus {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Share Tech Mono', monospace; /* Combinando com as fontes do seu projeto */
+}
+
+.titulo-pagina {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #ff0000; /* Vermelho Umbrella */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Card do Vírus (Pai) */
+.virus-card {
+    background-color: #1a1a1a;
+    border-left: 5px solid #ff0000;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    
+    /* TRANSIÇÃO SUAVE: Faz o efeito de hover entrar e sair de forma elegante */
+    transition: all 0.3s ease-in-out;
+}
+
+/* ANIMAÇÃO DE HOVER NO CARD DO VÍRUS */
+.virus-card:hover {
+    transform: translateX(8px); /* Dá um leve empurrãozinho para a direita */
+    background-color: #222222; /* clareia levemente o fundo do card */
+    border-left-color: #ffffff; /* Altera a cor da borda esquerda para branco no hover */
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3); /* Cria um leve brilho vermelho em volta */
+}
+
+/* DESTAQUE DO TÍTULO DO VÍRUS AO PASSAR O MOUSE */
+.virus-card:hover h2 {
+    color: #ff0000; /* O título do vírus fica vermelho */
+    transition: color 0.3s ease;
+}
+
+.virus-info h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.origem {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.descricao {
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Classe criada para os textos de "Jogos em que aparece" no HTML */
+.jogos-principais {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.divisor-virus {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ff0000, transparent);
+    margin: 50px 0;
+}

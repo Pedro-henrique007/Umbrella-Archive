@@ -1,63 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!--  O CSS VAI DE CADA PARTE DO PROJETO. ALTEREM!!!     -->
-    <link rel="stylesheet" href="/css/curiosidades.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Umbrella Archive - Vírus</title>
+    
+    <link class="css-link" rel="stylesheet" href="../css/virus.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
-    
-</head>
 <body>
+
     <header class="header">
         <section class="header-content">
             <a href="#" class="logo-link">
-                <img src="/img/Logo_umbrella.png" alt="Logo da Umbrella" class="logo-img">
+                <img src="../img/Logo_umbrella.png" alt="Logo da Umbrella" class="logo-img">
             </a>
 
             <nav class="navegacao">
-                <a href="/index.html">Home</a>
-                <a href="/pages/umbrella.html">Umbrella Corporation</a>
-                <a href="/pages/jogos.html">Jogos</a>
-                <a href="/pages/virus.html">Vírus</a>
-                <a href="/pages/Criaturas.html">Criaturas</a>
-                <a href="/pages/personagens.html">Personagens</a>
-                <a href="/pages/curiosidades.html">Curiosidades</a>
+                <a href="../index.html">Home</a>
+                <a href="umbrella.html">Umbrella Corporation</a>
+                <a href="jogos.html">Jogos</a>
+                <a href="virus.html">Vírus</a>
+                <a href="Criaturas.html">Criaturas</a>
+                <a href="personagens.html">Personagens</a>
+                <a href="curiosidades.html">Curiosidades</a>
             </nav>
         </section>
     </header>
-  <footer class="footer">
-    <div class="footer-grid">
-        <div>
-            <h3>Umbrella Archive</h3>
-            <p>O arquivo definitivo sobre os segredos da Umbrella Corporation.</p>
+
+    <main class="container-virus">
+        <h1 class="titulo-pagina">Arquivos de Patógenos e Mutações</h1>
+
+        <!-- SEÇÃO 1: T-VÍRUS -->
+        <section class="virus-card">
+            <div class="virus-conteudo-wrapper">
+                <div class="virus-foto-box">
+                    <img src="../img/t-virus.jpeg" alt="Amostra do T-Vírus" class="virus-foto">
+                </div>
+                <div class="virus-info">
+                    <h2>Tyrant Virus (T-Vírus)</h2>
+                    <p class="origem"><strong>Desenvolvedores:</strong> Dr. James Marcus (criador) e William Birkin.</p>
+                    <p class="origem"><strong>Data de Descoberta:</strong> 13 de Janeiro de 1978.</p>
+                    <p class="jogos-principais"><strong>Jogos em que aparece:</strong> Resident Evil (1996), Resident Evil 2, Resident Evil 3: Nemesis, Resident Evil Outbreak.</p>
+                    <p class="descricao"><strong>Base Biológica:</strong> Vírus Progenitor combinado com DNA de sanguessugas.</p>
+                    <p class="descricao"><strong>Utilização:</strong> G-Virus e TG-Virus.</p>
+                    <p class="descricao"><strong>Variantes:</strong><br>
+                        → 2.1 – V-ACT : T-Virus + zumbi morto = Crimson Head.<br>
+                        <em>*Observação: T-Virus + zumbi vivo = transforma-se em Licker.</em>
+                    </p>
+                    <p class="descricao"><strong>Antígenos (Vacinas):</strong><br>
+                        → Vaccine: estava sendo pesquisado no Hospital de Raccoon.<br>
+                        → Daylight (P-Base + V-Poison + T-Blood): pesquisado na Universidade de Raccoon. Mistura de uma base com veneno de abelha e sangue de uma criatura contaminada com o T-Virus.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divisor-virus">
+
+        <!-- SEÇÃO 2: G-VÍRUS -->
+        <section class="virus-card">
+            <div class="virus-conteudo-wrapper">
+                <div class="virus-foto-box">
+                    <img src="../img/G-Virus.png" alt="Amostra do G-Vírus" class="virus-foto">
+                </div>
+                <div class="virus-info">
+                    <h2>Golgotha Virus (G-Vírus)</h2>
+                    <p class="origem"><strong>Desenvolvedor:</strong> William Birkin.</p>
+                    <p class="origem"><strong>Data de Descoberta:</strong> 1988.</p>
+                    <p class="jogos-principais"><strong>Jogos em que aparece:</strong> Resident Evil 2, Resident Evil: Operation Raccoon City, Resident Evil: Degeneration.</p>
+                    <p class="descricao"><strong>Base Biológica:</strong> T-Virus administrado em Lisa Trevor durante anos e suas constantes mutações, após absorção total do parasita Nemesis em seu organismo.</p>
+                    <p class="descricao"><strong>Utilização:</strong> TG-Virus e C-Virus.</p>
+                    <p class="descricao"><strong>Antígenos (Vacinas):</strong><br>
+                        → G-Vaccine (Codinome “DEVIL”): é necessária a base da vacina já pronta para concluir a sua criação; só tem efeito se o portador do vírus ainda não tiver sofrido metamorfose.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divisor-virus">
+
+        <!-- SEÇÃO 3: LAS PLAGAS -->
+        <section class="virus-card">
+            <div class="virus-conteudo-wrapper">
+                <div class="virus-foto-box">
+                    <img src="../img/LasPLagas.png" alt="Parasita Las Plagas" class="virus-foto">
+                </div>
+                <div class="virus-info">
+                    <h2>Parasita Las Plagas</h2>
+                    <p class="origem"><strong>Descobridor:</strong> Primeiro Castelão de uma vila remota na Espanha.</p>
+                    <p class="origem"><strong>Data de Descoberta:</strong> Em meados do século 18, talvez.</p>
+                    <p class="jogos-principais"><strong>Jogos em que aparece:</strong> Resident Evil 4.</p>
+                    <p class="descricao"><strong>Base Biológica:</strong> Fósseis encontrados durante tempos de escavações nas minas locais.</p>
+                    <p class="descricao"><strong>Utilização:</strong> Plagas Tipo-2 e Tipo-3.</p>
+                    <p class="descricao"><strong>Variantes:</strong><br>
+                        → 6.1 – Plaga Subordinada: Ovo de plaga comum injetada na corrente sanguínea do indivíduo, para que ecloda e tome o controle de seu sistema nervoso.<br>
+                        → 6.2 – Plaga Controle: O indivíduo que a possui pode controlar os que possuem a Plaga Subordinada.<br>
+                        → 6.3 – Plaga Tipo-2: Plaga madura injetada oralmente no indivíduo, leva menos tempo para tomar o sistema nervoso completamente.<br>
+                        → 6.4 – Plaga Tipo-3: Combinação de plaga comum com gene da Plaga Controle.
+                    </p>
+                    <p class="descricao"><strong>Antígenos (Vacinas):</strong> A Plaga já adulta só pode ser removida a partir de um procedimento cirúrgico a laser.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divisor-virus">
+
+        <!-- SEÇÃO 4: VÍRUS UROBOROS -->
+        <section class="virus-card">
+            <div class="virus-conteudo-wrapper">
+                <div class="virus-foto-box">
+                    <img src="../img/Uroboros.png" alt="Amostra do Vírus Uroboros" class="virus-foto">
+                </div>
+                <div class="virus-info">
+                    <h2>Vírus Uroboros</h2>
+                    <p class="origem"><strong>Desenvolvedor:</strong> Albert Wesker, Tricell.</p>
+                    <p class="origem"><strong>Data de Desenvolvimento:</strong> Provavelmente 2008.</p>
+                    <p class="jogos-principais"><strong>Jogos em que aparece:</strong> Resident Evil 5, Resident Evil Revelations 2.</p>
+                    <p class="descricao"><strong>Base Biológica:</strong> Progenitor Virus combinado com anticorpos de T-Virus (retirados do corpo de Jill Valentine) para diminuição dos efeitos nocivos do Progenitor.</p>
+                    <p class="descricao"><strong>Utilização:</strong> Não serviu de base para outros vírus.</p>
+                    <p class="descricao"><strong>Antígenos (Vacinas):</strong> Não possui.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divisor-virus">
+
+        <!-- SEÇÃO 5: C-VÍRUS -->
+        <section class="virus-card">
+            <div class="virus-conteudo-wrapper">
+                <div class="virus-foto-box">
+                    <img src="../img/Cvirus.jfif" alt="Amostra do C-Vírus" class="virus-foto">
+                </div>
+                <div class="virus-info">
+                    <h2>Chrysalid Virus (C-Vírus)</h2>
+                    <p class="origem"><strong>Desenvolvedora:</strong> Carla Radames.</p>
+                    <p class="origem"><strong>Data de Descoberta:</strong> 2001.</p>
+                    <p class="jogos-principais"><strong>Jogos em que aparece:</strong> Resident Evil 6.</p>
+                    <p class="descricao"><strong>Base Biológica:</strong> Vírus Progenitor combinado com T-Veronica, criando a variante T-02, que posteriormente foi combinada com o G-Virus, gerando assim o C-Virus.</p>
+                    <p class="descricao"><strong>Utilização:</strong> Não serviu de base para outros vírus.</p>
+                    <p class="descricao"><strong>Variantes:</strong><br>
+                        → 9.1 – C-Virus Aprimorado: C-Virus combinado com o sangue de Jake Muller, composto de poderosos anticorpos que eliminam o “estágio crisálida” do hospedeiro.
+                    </p>
+                    <p class="descricao"><strong>Antígenos (Vacinas):</strong><br>
+                        → Anti-C (ou C-Virus Vaccine): Criado a partir do sangue de Jake Muller. É efetiva somente se administrada em pessoas que ainda não foram infectadas com o C-Virus.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divisor-virus">
+
+        <!-- SEÇÃO 6: MUTAMICETO SÉRIE E -->
+        <section class="virus-card">
+            <div class="virus-conteudo-wrapper">
+                <div class="virus-foto-box">
+                    <img src="../img/Mofo.jfif" alt="Rede de Infecção por Mofo" class="virus-foto">
+                </div>
+                <div class="virus-info">
+                    <h2>Mutamiceto Série E (O Mofo)</h2>
+                    <p class="origem"><strong>Desenvolvedores:</strong> Conexões (The Connections) e HCF (assistência técnica).</p>
+                    <p class="origem"><strong>Data da Descoberta:</strong> 1919 (Leste Europeu); 2000 (início das pesquisas).</p>
+                    <p class="jogos-principais"><strong>Jogos em que aparece:</strong> Resident Evil 7: Biohazard, Resident Evil Village (RE8).</p>
+                    <p class="descricao"><strong>Natureza do Mutamiceto:</strong> Substância in natura encontrada pela primeira vez, em seu estado natural, em uma caverna no Leste Europeu.</p>
+                    <p class="descricao"><strong>Utilização:</strong> “Mofados” (superorganismos tomados pelo mutamiceto) e seus derivados, Licanos e derivados (Leste Europeu, por Mãe Miranda).</p>
+                    <p class="descricao"><strong>Antígenos (Vacinas):</strong><br>
+                        → Soro: Desenvolvido a partir de células do nervo craniano e do nervo periférico de cobaia da série D; quando aplicado em infectados, provoca a calcificação dos micélios (pode ser fatal dependendo do estágio).<br>
+                        → E-Necrotoxina: Forma “maximizada” do soro; combinada com amostras de células do indivíduo série E, provoca a calcificação fatal nos infectores (usada para o descarte de ativos como Eveline).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divisor-virus">
+
+        <!-- SEÇÃO 7: ANTIVÍRUS ELPIS (Corrigido para Agente Neutralizador) -->
+        <section class="virus-card">
+            <div class="virus-conteudo-wrapper">
+                <div class="virus-foto-box">
+                    <img src="../img/Elpis.jfif" alt="Cápsulas do Antivírus Elpis" class="virus-foto">
+                </div>
+                <div class="virus-info">
+                    <h2>Antivírus Elpis</h2>
+                    <p class="origem"><strong>Desenvolvedores:</strong> Desconhecidos / Remanescentes Corporativos.</p>
+                    <p class="origem"><strong>Data de Descoberta:</strong> Período de investigação pós-Raccoon City.</p>
+                    <p class="jogos-principais"><strong>Jogos em que aparece:</strong> Resident Evil Requiem.</p>
+                    <p class="descricao"><strong>Base Biológica:</strong> Agente neutralizador sintetizado para combater patógenos avançados e reverter processos de mutação acelerada.</p>
+                    <p class="descricao"><strong>Utilização:</strong> Recurso crucial de cura e contenção biológica na jornada de Leon S. Kennedy e Grace Ashcroft.</p>
+                    <p class="descricao"><strong>Resumo de Ação:</strong> Atua diretamente na interrupção do ciclo mutativo. Diferente de vacinas comuns, ele é capaz de estabilizar o hospedeiro infetado, garantindo que suas funções cerebrais, traços de personalidade e comportamento originais permaneçam completamente intactos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3>Umbrella Archive</h3>
+                <p>O arquivo definitivo sobre os segredos da Umbrella Corporation.</p>
+            </div>
+
+            <div>
+                <h4>SEÇÕES</h4>
+                <a href="Umbrella.html">Umbrella</a>
+                <a href="jogos.html">Jogos</a>
+                <a href="virus.html">Virus</a>
+                <a href="Criaturas.html">Criaturas</a>
+                <a href="personagens.html">Personagens</a>
+                <a href="curiosidades.html">Curiosidades</a>
+            </div>
+
+            <div>
+                <h4>Mais Informações</h4>
+                <a href="contato.html">Contato</a>
+                <a href="https://github.com/nicolasronnick" target="_blank">Github</a>
+            </div>
         </div>
 
-        <div>
-            <h4>SEÇÕES</h4>
-            <a href="/pages/Umbrella.html">Umbrella</a>
-            <a href="/pages/jogos.html">Jogos</a>
-            <a href="/pages/virus.html">Virus</a>
-            <a href="/pages/Criaturas.html">Criaturas</a>
-            <a href="/pages/personagens.html">Personagens</a>
-            <a href="/pages/curiosidades.html">Curiosidades</a>
-        </div>
-
-        <div>
-            <h4>Mais Informações</h4>
-            <a href="/pages/contato.html">Contato</a>
-           <a href="https://github.com/nicolasronnick">Github</a>
-        </div>
-    </div>
-
-    <p class="copyright">
-        © 2026 Umbrella-Archive. Todos os direitos reservados.<br>
-        Site de fãs não oficial. 
-    </p>
-</footer>
+        <p class="copyright">
+            © 2026 Umbrella-Archive. Todos os direitos reservados.<br>
+            Site de fãs não oficial. 
+        </p>
+    </footer>
 </body>
 </html>
